@@ -29,8 +29,9 @@ VOICES: list[Voice] = [
           "Trong bài học hôm nay, các em sẽ học cách dùng hàm filter và map trong JavaScript "
           "để xử lý dữ liệu. Mở file bài tập lên và chúng ta bắt đầu nhé."),
     Voice("phuong_linh", "Phương Linh", "female",
-          "Tin nhanh buổi sáng: chỉ số VN-Index tăng nhẹ, trong khi nhóm cổ phiếu công nghệ "
-          "tiếp tục thu hút dòng tiền từ các quỹ đầu tư nước ngoài."),
+          "Bản tin buổi sáng: thị trường chứng khoán mở cửa trong sắc xanh, nhóm cổ phiếu công "
+          "nghệ và các startup fintech tiếp tục dẫn dắt dòng tiền. Quý vị có thể theo dõi update "
+          "trực tiếp trên app của chúng tôi."),
     Voice("quynh_nhu", "Quỳnh Như", "female",
           "Bạn có mười phút không? Mình muốn demo tính năng voice cloning mới, feedback của bạn "
           "rất quan trọng với team trước khi release."),

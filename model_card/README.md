@@ -52,7 +52,7 @@ The model is a from-scratch re-implementation of the 99M-parameter [Supertonic 3
 - **Bảo Kim** (`bao_kim`): "Chào mừng bạn đến với podcast Công nghệ mỗi ngày. Hôm nay chúng ta sẽ nói về cách AI đang thay đổi ngành marketing và những skill mà người làm content cần có."
 - **Khánh Vy** (`khanh_vy`): "Dạ, đơn hàng của anh đã được xác nhận và sẽ ship trong vòng hai ngày. Anh có thể track đơn hàng qua app hoặc website của bên em bất cứ lúc nào ạ."
 - **Ngọc Huyền** (`ngoc_huyen`): "Trong bài học hôm nay, các em sẽ học cách dùng hàm filter và map trong JavaScript để xử lý dữ liệu. Mở file bài tập lên và chúng ta bắt đầu nhé."
-- **Phương Linh** (`phuong_linh`): "Tin nhanh buổi sáng: chỉ số VN-Index tăng nhẹ, trong khi nhóm cổ phiếu công nghệ tiếp tục thu hút dòng tiền từ các quỹ đầu tư nước ngoài."
+- **Phương Linh** (`phuong_linh`): "Bản tin buổi sáng: thị trường chứng khoán mở cửa trong sắc xanh, nhóm cổ phiếu công nghệ và các startup fintech tiếp tục dẫn dắt dòng tiền. Quý vị có thể theo dõi update trực tiếp trên app của chúng tôi."
 - **Quỳnh Như** (`quynh_nhu`): "Bạn có mười phút không? Mình muốn demo tính năng voice cloning mới, feedback của bạn rất quan trọng với team trước khi release."
 - **Gia Bảo** (`gia_bao`): "Chào cả nhà, hôm nay mình review chiếc laptop mới: màn hình OLED, pin trâu, và hiệu năng thì khỏi bàn. Bấm subscribe để không bỏ lỡ video tiếp theo nhé."
 - **Hoàng Nam** (`hoang_nam`): "Thưa quý khách, chuyến bay VN một hai ba đi Đà Nẵng sẽ bắt đầu boarding tại cửa số bảy trong vài phút nữa. Xin vui lòng chuẩn bị sẵn thẻ lên máy bay."
