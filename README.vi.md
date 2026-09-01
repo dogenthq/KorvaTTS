@@ -5,6 +5,7 @@
 [![Models](https://img.shields.io/badge/🤗%20Hugging%20Face-dogenthq%2FKorvaTTS-blue)](https://huggingface.co/dogenthq/KorvaTTS)
 [![License: Apache-2.0](https://img.shields.io/badge/license-Apache--2.0-green)](LICENSE)
 [![GitHub stars](https://img.shields.io/github/stars/dogenthq/KorvaTTS?style=social)](https://github.com/dogenthq/KorvaTTS/stargazers)
+[![Discord](https://img.shields.io/badge/Discord-tham%20gia%20cộng%20đồng-5865F2?logo=discord&logoColor=white)](https://discord.gg/cX5rmsRcsg)
 
 KorvaTTS là hệ thống text-to-speech mã nguồn mở tập trung vào **tiếng Việt có code-switching** (câu tiếng Việt chứa từ tiếng Anh, tên thương hiệu, thuật ngữ kỹ thuật). Toàn bộ chạy on-device qua ONNX Runtime: không cần GPU, không gọi API, âm thanh 44.1 kHz.
 
@@ -27,7 +28,7 @@ Model là bản re-implement của chúng tôi theo kiến trúc [Supertonic 3](
 | **2. Voice cloning + training** | Encoder từ audio tham chiếu → voice style, script train / fine-tune bằng PyTorch, công cụ chuẩn bị dữ liệu | 🔜 dự kiến |
 | **3. Cải tiến kiến trúc** | Thay đổi kiến trúc TTS + cloning để prosody tiếng Việt và độ giống giọng tốt hơn. **Sẽ không còn tương thích với Supertonic.** | 🧭 sau này |
 
-Giai đoạn 2 bắt đầu khi bản giai đoạn 1 đã có cộng đồng đủ mạnh — **mục tiêu là 1.000 sao GitHub** ⭐ [![GitHub stars](https://img.shields.io/github/stars/dogenthq/KorvaTTS?label=hiện%20tại&color=yellow)](https://github.com/dogenthq/KorvaTTS/stargazers). Hãy star repo để đẩy lộ trình đi nhanh hơn, và theo dõi tab Issues / Discussions để cập nhật tiến độ.
+Giai đoạn 2 bắt đầu khi bản giai đoạn 1 đã có cộng đồng đủ mạnh — **mục tiêu là 1.000 sao GitHub** ⭐ [![GitHub stars](https://img.shields.io/github/stars/dogenthq/KorvaTTS?label=hiện%20tại&color=yellow)](https://github.com/dogenthq/KorvaTTS/stargazers). Hãy star repo để đẩy lộ trình đi nhanh hơn, và tham gia [Discord](https://discord.gg/cX5rmsRcsg) hoặc theo dõi tab Issues để cập nhật tiến độ.
 
 <a href="https://star-history.com/#dogenthq/KorvaTTS&Date"><img src="https://api.star-history.com/svg?repos=dogenthq/KorvaTTS&type=Date" alt="Biểu đồ số sao theo thời gian" width="600"></a>
 
@@ -113,6 +114,10 @@ KorvaTTS đứng trên vai những dự án sau. Nếu bạn dùng KorvaTTS, vui
 - **PhoAudiobook** — kho ngữ liệu tiếng Việt. [huggingface.co/datasets/thivux/phoaudiobook](https://huggingface.co/datasets/thivux/phoaudiobook)
 
 Mục BibTeX đầy đủ xem ở [README tiếng Anh](README.md#acknowledgements--citation).
+
+## Cộng đồng
+
+Tham gia Discord của KorvaTTS để hỏi đáp, chia sẻ sản phẩm bạn làm, đề xuất giọng mới và theo dõi tiến độ giai đoạn 2: **[discord.gg/cX5rmsRcsg](https://discord.gg/cX5rmsRcsg)**. Báo lỗi và đề xuất tính năng gửi qua [GitHub Issues](https://github.com/dogenthq/KorvaTTS/issues).
 
 ## Ủng hộ dự án
 

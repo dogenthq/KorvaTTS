@@ -22,6 +22,7 @@ datasets:
 # KorvaTTS — Vietnamese-first, on-device text-to-speech
 
 [![GitHub](https://img.shields.io/badge/GitHub-dogenthq%2FKorvaTTS-black?logo=github)](https://github.com/dogenthq/KorvaTTS)
+[![Discord](https://img.shields.io/badge/Discord-join%20the%20community-5865F2?logo=discord&logoColor=white)](https://discord.gg/cX5rmsRcsg)
 [![License: Apache-2.0](https://img.shields.io/badge/license-Apache--2.0-green)](https://github.com/dogenthq/KorvaTTS/blob/main/MODEL_LICENSE.md)
 
 KorvaTTS is an open-source text-to-speech model focused on **Vietnamese with natural code-switching** (Vietnamese sentences containing English words, brand names and tech terms). It runs entirely on-device through ONNX Runtime — no GPU, no API calls — and outputs 44.1 kHz audio.
@@ -44,6 +45,10 @@ The model is a from-scratch re-implementation of the 99M-parameter [Supertonic 3
 | `huu_dat` | Hữu Đạt | male | <audio controls preload="none" src="https://huggingface.co/dogenthq/KorvaTTS/resolve/main/raw_voices/huu_dat.wav"></audio> |
 | `quang_huy` | Quang Huy | male | <audio controls preload="none" src="https://huggingface.co/dogenthq/KorvaTTS/resolve/main/raw_voices/quang_huy.wav"></audio> |
 | `thanh_phong` | Thanh Phong | male | <audio controls preload="none" src="https://huggingface.co/dogenthq/KorvaTTS/resolve/main/raw_voices/thanh_phong.wav"></audio> |
+
+## Community
+
+Questions, voice requests, show-and-tell: **[Discord](https://discord.gg/cX5rmsRcsg)** · bugs: [GitHub Issues](https://github.com/dogenthq/KorvaTTS/issues).
 
 ## Usage
 

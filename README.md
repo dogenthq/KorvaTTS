@@ -5,6 +5,7 @@
 [![Models](https://img.shields.io/badge/🤗%20Hugging%20Face-dogenthq%2FKorvaTTS-blue)](https://huggingface.co/dogenthq/KorvaTTS)
 [![License: Apache-2.0](https://img.shields.io/badge/license-Apache--2.0-green)](LICENSE)
 [![GitHub stars](https://img.shields.io/github/stars/dogenthq/KorvaTTS?style=social)](https://github.com/dogenthq/KorvaTTS/stargazers)
+[![Discord](https://img.shields.io/badge/Discord-join%20the%20community-5865F2?logo=discord&logoColor=white)](https://discord.gg/cX5rmsRcsg)
 
 KorvaTTS is an open-source text-to-speech system focused on **Vietnamese with natural code-switching** (Vietnamese sentences that contain English words, brand names, tech terms). It runs entirely on-device through ONNX Runtime: no GPU required, no API calls, 44.1 kHz output.
 
@@ -27,7 +28,7 @@ The model is our own re-implementation of the 99M-parameter [Supertonic 3](https
 | **2. Voice cloning + training** | Reference-audio → voice style encoder, PyTorch training / fine-tuning recipes, dataset tooling | 🔜 planned |
 | **3. Architecture improvements** | Original changes to the TTS + cloning architecture for better Vietnamese prosody and cloning fidelity. **Breaks Supertonic compatibility.** | 🧭 later |
 
-Phase 2 starts once the phase-1 release has a healthy community around it — **our goal is 1,000 GitHub stars** ⭐ [![GitHub stars](https://img.shields.io/github/stars/dogenthq/KorvaTTS?label=current&color=yellow)](https://github.com/dogenthq/KorvaTTS/stargazers). Star the repo to move the roadmap forward, and follow the issues tab / discussions for progress.
+Phase 2 starts once the phase-1 release has a healthy community around it — **our goal is 1,000 GitHub stars** ⭐ [![GitHub stars](https://img.shields.io/github/stars/dogenthq/KorvaTTS?label=current&color=yellow)](https://github.com/dogenthq/KorvaTTS/stargazers). Star the repo to move the roadmap forward, and join our [Discord](https://discord.gg/cX5rmsRcsg) or watch the issues tab for progress.
 
 <a href="https://star-history.com/#dogenthq/KorvaTTS&Date"><img src="https://api.star-history.com/svg?repos=dogenthq/KorvaTTS&type=Date" alt="Star History Chart" width="600"></a>
 
@@ -141,6 +142,10 @@ KorvaTTS builds on the work of others. If you use it, please also cite them:
   year      = {2025}
 }
 ```
+
+## Community
+
+Join the KorvaTTS Discord to ask questions, share what you build, request voices, and follow phase-2 development: **[discord.gg/cX5rmsRcsg](https://discord.gg/cX5rmsRcsg)**. Bug reports and feature requests are welcome on [GitHub Issues](https://github.com/dogenthq/KorvaTTS/issues).
 
 ## Support the project
 
