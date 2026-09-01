@@ -20,28 +20,17 @@ The model is our own re-implementation of the 99M-parameter [Supertonic 3](https
 - 🧩 **Drop-in compatible** with Supertonic 3 runtimes (see [Compatibility](#compatibility-with-supertonic))
 - 🪪 **Apache-2.0** for both code and weights
 
-## Roadmap
+## Voices
 
-| Phase | Scope | Status |
-|-------|-------|--------|
-| **1. ONNX inference** | Python package, CLI, published weights + voice styles on Hugging Face | ✅ this release |
-| **2. Voice cloning + training** | Reference-audio → voice style encoder, PyTorch training / fine-tuning recipes, dataset tooling | 🔜 planned |
-| **3. Architecture improvements** | Original changes to the TTS + cloning architecture for better Vietnamese prosody and cloning fidelity. **Breaks Supertonic compatibility.** | 🧭 later |
+10 bundled voices — 5 female, 5 male. Listen to every voice on the [Hugging Face model card](https://huggingface.co/dogenthq/KorvaTTS#voices).
 
-Phase 2 starts once the phase-1 release has a healthy community around it — **our goal is 1,000 GitHub stars** ⭐ [![GitHub stars](https://img.shields.io/github/stars/dogenthq/KorvaTTS?label=current&color=yellow)](https://github.com/dogenthq/KorvaTTS/stargazers). Star the repo to move the roadmap forward, and join our [Discord](https://discord.gg/cX5rmsRcsg) or watch the issues tab for progress.
-
-<a href="https://star-history.com/#dogenthq/KorvaTTS&Date"><img src="https://api.star-history.com/svg?repos=dogenthq/KorvaTTS&type=Date" alt="Star History Chart" width="600"></a>
-
-## Language support
-
-- **Primary:** Vietnamese (`lang="vi"`), including English words embedded in Vietnamese text.
-- **English (`lang="en"`):** part of the training data is English, so plain English works, but we do **not** guarantee English quality matches — or exceeds — the original Supertonic 3 English voices. Vietnamese is what this model is built for.
-- **Other languages:** the Supertonic 3 tag set (31 languages) is still accepted by the text encoder, but those languages were not in the training data; quality is untested.
-
-## Training data
-
-- [PhoAudiobook](https://huggingface.co/datasets/thivux/phoaudiobook) — 941 hours of curated Vietnamese audiobook speech, introduced in [Zero-Shot Text-to-Speech for Vietnamese (ACL 2025)](https://aclanthology.org/2025.acl-short.81.pdf).
-- A private, author-collected Vietnamese/English code-switching set used to improve mixed-language reading. This set is not released.
+| Female | Male |
+|--------|------|
+| `bao_kim` — Bảo Kim | `gia_bao` — Gia Bảo |
+| `khanh_vy` — Khánh Vy | `hoang_nam` — Hoàng Nam |
+| `ngoc_huyen` — Ngọc Huyền | `huu_dat` — Hữu Đạt |
+| `phuong_linh` — Phương Linh | `quang_huy` — Quang Huy |
+| `quynh_nhu` — Quỳnh Như | `thanh_phong` — Thanh Phong |
 
 ## Installation
 
@@ -78,23 +67,54 @@ korvatts synth "Xin chào, đây là KorvaTTS." -v khanh_vy -o hello.wav
 
 Use local assets instead of downloading: pass `TTS(assets_dir="path/to/assets")` or set `KORVATTS_ASSETS_DIR`. The directory must contain `onnx/` and `voice_styles/`.
 
-## Voices
+## Language support
 
-10 bundled voices — 5 female, 5 male. Listen to every voice on the [Hugging Face model card](https://huggingface.co/dogenthq/KorvaTTS#voices).
-
-| Female | Male |
-|--------|------|
-| `bao_kim` — Bảo Kim | `gia_bao` — Gia Bảo |
-| `khanh_vy` — Khánh Vy | `hoang_nam` — Hoàng Nam |
-| `ngoc_huyen` — Ngọc Huyền | `huu_dat` — Hữu Đạt |
-| `phuong_linh` — Phương Linh | `quang_huy` — Quang Huy |
-| `quynh_nhu` — Quỳnh Như | `thanh_phong` — Thanh Phong |
+- **Primary:** Vietnamese (`lang="vi"`), including English words embedded in Vietnamese text.
+- **English (`lang="en"`):** part of the training data is English, so plain English works, but we do **not** guarantee English quality matches — or exceeds — the original Supertonic 3 English voices. Vietnamese is what this model is built for.
+- **Other languages:** the Supertonic 3 tag set (31 languages) is still accepted by the text encoder, but those languages were not in the training data; quality is untested.
 
 ## Compatibility with Supertonic
 
 The phase-1 weights keep the exact ONNX graph signatures and voice-style JSON format of Supertonic 3. You can copy the KorvaTTS `onnx/` and `voice_styles/` folders into any Supertonic 3 runtime (Python, Node.js, browser/WebGPU, Rust, C++, Swift, Flutter, …) and they will work unchanged.
 
 This compatibility is intentional for phases 1–2. **Phase 3 will change the architecture and will not be loadable by Supertonic runtimes.** Version tags on Hugging Face will make it clear which checkpoints are compatible.
+
+## Roadmap
+
+| Phase | Scope | Status |
+|-------|-------|--------|
+| **1. ONNX inference** | Python package, CLI, published weights + voice styles on Hugging Face | ✅ this release |
+| **2. Voice cloning + training** | Reference-audio → voice style encoder, PyTorch training / fine-tuning recipes, dataset tooling | 🔜 planned |
+| **3. Architecture improvements** | Original changes to the TTS + cloning architecture for better Vietnamese prosody and cloning fidelity. **Breaks Supertonic compatibility.** | 🧭 later |
+
+Phase 2 starts once the phase-1 release has a healthy community around it — **our goal is 1,000 GitHub stars** ⭐ [![GitHub stars](https://img.shields.io/github/stars/dogenthq/KorvaTTS?label=current&color=yellow)](https://github.com/dogenthq/KorvaTTS/stargazers). Star the repo to move the roadmap forward, and join our [Discord](https://discord.gg/cX5rmsRcsg) or watch the issues tab for progress.
+
+<a href="https://star-history.com/#dogenthq/KorvaTTS&Date"><img src="https://api.star-history.com/svg?repos=dogenthq/KorvaTTS&type=Date" alt="Star History Chart" width="600"></a>
+
+## Training data
+
+- [PhoAudiobook](https://huggingface.co/datasets/thivux/phoaudiobook) — 941 hours of curated Vietnamese audiobook speech, introduced in [Zero-Shot Text-to-Speech for Vietnamese (ACL 2025)](https://aclanthology.org/2025.acl-short.81.pdf).
+- A private, author-collected Vietnamese/English code-switching set used to improve mixed-language reading. This set is not released.
+
+## Community
+
+Join the KorvaTTS Discord to ask questions, share what you build, request voices, and follow phase-2 development: **[discord.gg/cX5rmsRcsg](https://discord.gg/cX5rmsRcsg)**. Bug reports and feature requests are welcome on [GitHub Issues](https://github.com/dogenthq/KorvaTTS/issues).
+
+## Support the project
+
+KorvaTTS is free and open source. Training runs and voice recordings cost real money — if this project is useful to you, a small donation goes directly into the voice cloning and training work in phase 2. Scan the VietQR code below with any Vietnamese banking app (international options coming later).
+
+<img src="https://img.vietqr.io/image/970407-19035566489014-compact.png?addInfo=Ung%20ho%20KorvaTTS&accountName=LE%20TAN%20NGHIA" alt="VietQR — Techcombank 19035566489014 — LE TAN NGHIA" width="320">
+
+## Contributing
+
+Issues and pull requests are welcome. Run the checks locally:
+
+```bash
+pip install -e ".[dev]"
+ruff check .
+pytest        # model tests auto-skip unless ./assets exists
+```
 
 ## Licenses
 
@@ -141,24 +161,4 @@ KorvaTTS builds on the work of others. If you use it, please also cite them:
   booktitle = {Proceedings of the 63rd Annual Meeting of the Association for Computational Linguistics (Short Papers)},
   year      = {2025}
 }
-```
-
-## Community
-
-Join the KorvaTTS Discord to ask questions, share what you build, request voices, and follow phase-2 development: **[discord.gg/cX5rmsRcsg](https://discord.gg/cX5rmsRcsg)**. Bug reports and feature requests are welcome on [GitHub Issues](https://github.com/dogenthq/KorvaTTS/issues).
-
-## Support the project
-
-KorvaTTS is free and open source. Training runs and voice recordings cost real money — if this project is useful to you, a small donation goes directly into the voice cloning and training work in phase 2. Scan the VietQR code below with any Vietnamese banking app (international options coming later).
-
-<img src="https://img.vietqr.io/image/970407-19035566489014-compact.png?addInfo=Ung%20ho%20KorvaTTS&accountName=LE%20TAN%20NGHIA" alt="VietQR — Techcombank 19035566489014 — LE TAN NGHIA" width="320">
-
-## Contributing
-
-Issues and pull requests are welcome. Run the checks locally:
-
-```bash
-pip install -e ".[dev]"
-ruff check .
-pytest        # model tests auto-skip unless ./assets exists
 ```
