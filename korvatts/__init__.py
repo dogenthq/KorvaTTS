@@ -5,6 +5,6 @@ from korvatts.text_processor import AVAILABLE_LANGS
 from korvatts.tts import TTS
 from korvatts.voice_style import VoiceStyle
 
-__version__ = "0.1.1"
+__version__ = "0.1.2"
 
 __all__ = ["AVAILABLE_LANGS", "TTS", "VoiceStyle", "__version__", "resolve_assets_dir"]

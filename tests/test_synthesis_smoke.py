@@ -53,6 +53,15 @@ def test_voice_name_cannot_escape_voice_styles_dir(tts):
         tts.get_voice("../onnx/tts")
 
 
+def test_output_tail_is_cleaned(tts):
+    voice = tts.list_voices()[0]
+    wav, duration = tts.synthesize("Xin chào các bạn.", voice=voice, total_steps=4, seed=0)
+    sr = tts.sample_rate
+    assert wav[-1] == 0.0  # fade ends exactly at zero
+    assert np.abs(wav[-int(0.002 * sr) :]).max() < 0.25  # no abrupt cut / burst at the end
+    assert abs(len(wav) / sr - duration) < 1e-3  # duration reflects the cleaned audio
+
+
 def test_long_text_is_chunked_and_joined(tts):
     voice = tts.list_voices()[0]
     text = "Đây là câu thứ nhất. " * 30  # > 300 chars → several chunks

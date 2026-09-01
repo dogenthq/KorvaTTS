@@ -17,6 +17,7 @@ import numpy as np
 import soundfile as sf
 
 from korvatts.assets import list_voices, resolve_assets_dir
+from korvatts.audio_post import clean_tail
 from korvatts.session import ModelSessions
 from korvatts.text_processor import TextProcessor, chunk_text, length_to_mask
 from korvatts.voice_style import VoiceStyle
@@ -91,12 +92,12 @@ class TTS:
         silence = np.zeros(int(silence_between_chunks * self.sample_rate), dtype=np.float32)
         for chunk in chunks:
             wav, dur = self._infer(chunk, lang, style, total_steps, speed, rng)
-            trimmed = wav[0, : int(dur * self.sample_rate)]
+            trimmed = clean_tail(wav[0, : int(dur * self.sample_rate)], self.sample_rate)
             if pieces:
                 pieces.append(silence)
                 total += silence_between_chunks
             pieces.append(trimmed)
-            total += dur
+            total += len(trimmed) / self.sample_rate
         return np.concatenate(pieces), total
 
     def save_audio(self, wav: np.ndarray, path: str | Path) -> None:
