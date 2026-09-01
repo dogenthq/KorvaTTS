@@ -1,0 +1,45 @@
+[project]
+name = "korvatts"
+version = "0.1.0"
+description = "Vietnamese-first, on-device text-to-speech (ONNX) with code-switching support"
+readme = "README.md"
+license = { text = "Apache-2.0" }
+requires-python = ">=3.10"
+authors = [{ name = "dogenthq" }]
+keywords = ["tts", "text-to-speech", "vietnamese", "onnx", "speech-synthesis"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: Apache Software License",
+    "Operating System :: OS Independent",
+    "Topic :: Multimedia :: Sound/Audio :: Speech",
+]
+dependencies = [
+    "onnxruntime>=1.17",
+    "numpy>=1.24",
+    "soundfile>=0.12",
+    "huggingface_hub>=0.23",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8", "ruff>=0.5"]
+
+[project.scripts]
+korvatts = "korvatts.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/dogenthq/KorvaTTS"
+Models = "https://huggingface.co/dogenthq/KorvaTTS"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["korvatts*"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

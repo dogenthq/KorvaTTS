@@ -1,0 +1,29 @@
+# Model assets live on HuggingFace, never in git
+assets/
+*.onnx
+
+# Synthesis outputs
+results/
+outputs/
+*.wav
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.venv/
+venv/
+.pytest_cache/
+.ruff_cache/
+.coverage
+
+# IDE / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Local tooling
+.claude/
