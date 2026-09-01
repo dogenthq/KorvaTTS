@@ -4,8 +4,9 @@ Usage:
     huggingface-cli login            # once
     python scripts/publish_to_huggingface.py [--repo dogenthq/KorvaTTS] [--dry-run]
 
-Uploads from ./assets: onnx/, voice_styles/, raw_voices/ and the model card at
-model_card/README.md. Run scripts/strip_voice_style_metadata.py first.
+Uploads from ./assets: onnx/, voice_styles/, raw_voices/, samples/ and the model card at
+model_card/README.md. Run scripts/strip_voice_style_metadata.py and
+scripts/generate_voice_samples.py first.
 """
 
 from __future__ import annotations
@@ -17,20 +18,21 @@ from pathlib import Path
 REPO_ROOT = Path(__file__).resolve().parents[1]
 ASSETS_DIR = REPO_ROOT / "assets"
 MODEL_CARD = REPO_ROOT / "model_card" / "README.md"
-ALLOW_PATTERNS = ["onnx/*", "voice_styles/*.json", "raw_voices/*.wav"]
+ALLOW_PATTERNS = ["onnx/*", "voice_styles/*.json", "raw_voices/*.wav", "samples/*.wav"]
 
 
 def preflight() -> list[str]:
     problems = []
-    for sub in ("onnx", "voice_styles", "raw_voices"):
+    for sub in ("onnx", "voice_styles", "raw_voices", "samples"):
         if not (ASSETS_DIR / sub).is_dir():
             problems.append(f"missing directory: assets/{sub}")
     if not MODEL_CARD.is_file():
         problems.append(f"missing model card: {MODEL_CARD.relative_to(REPO_ROOT)}")
     styles = {p.stem for p in (ASSETS_DIR / "voice_styles").glob("*.json")}
-    raw = {p.stem for p in (ASSETS_DIR / "raw_voices").glob("*.wav")}
-    if styles != raw:
-        problems.append(f"voice_styles/raw_voices mismatch: {sorted(styles ^ raw)}")
+    for sub in ("raw_voices", "samples"):
+        wavs = {p.stem for p in (ASSETS_DIR / sub).glob("*.wav")}
+        if styles != wavs:
+            problems.append(f"voice_styles/{sub} mismatch: {sorted(styles ^ wavs)}")
     return problems
 
 

@@ -31,20 +31,36 @@ The model is a from-scratch re-implementation of the 99M-parameter [Supertonic 3
 
 ## Voices
 
-10 bundled voices (5 female, 5 male). Each clip below is the reference recording the voice style was built from (`raw_voices/`), so you hear the real speaker the model reproduces.
+10 bundled voices (5 female, 5 male). **Sample** = synthesized by KorvaTTS from a different Vietnamese sentence per voice, each with natural English code-switching. **Reference** = the original recording the voice style was built from (`raw_voices/`).
 
-| Voice | Name | Gender | Reference recording |
-|-------|------|--------|--------|
-| `bao_kim` | Bảo Kim | female | <audio controls preload="none" src="https://huggingface.co/dogenthq/KorvaTTS/resolve/main/raw_voices/bao_kim.wav"></audio> |
-| `khanh_vy` | Khánh Vy | female | <audio controls preload="none" src="https://huggingface.co/dogenthq/KorvaTTS/resolve/main/raw_voices/khanh_vy.wav"></audio> |
-| `ngoc_huyen` | Ngọc Huyền | female | <audio controls preload="none" src="https://huggingface.co/dogenthq/KorvaTTS/resolve/main/raw_voices/ngoc_huyen.wav"></audio> |
-| `phuong_linh` | Phương Linh | female | <audio controls preload="none" src="https://huggingface.co/dogenthq/KorvaTTS/resolve/main/raw_voices/phuong_linh.wav"></audio> |
-| `quynh_nhu` | Quỳnh Như | female | <audio controls preload="none" src="https://huggingface.co/dogenthq/KorvaTTS/resolve/main/raw_voices/quynh_nhu.wav"></audio> |
-| `gia_bao` | Gia Bảo | male | <audio controls preload="none" src="https://huggingface.co/dogenthq/KorvaTTS/resolve/main/raw_voices/gia_bao.wav"></audio> |
-| `hoang_nam` | Hoàng Nam | male | <audio controls preload="none" src="https://huggingface.co/dogenthq/KorvaTTS/resolve/main/raw_voices/hoang_nam.wav"></audio> |
-| `huu_dat` | Hữu Đạt | male | <audio controls preload="none" src="https://huggingface.co/dogenthq/KorvaTTS/resolve/main/raw_voices/huu_dat.wav"></audio> |
-| `quang_huy` | Quang Huy | male | <audio controls preload="none" src="https://huggingface.co/dogenthq/KorvaTTS/resolve/main/raw_voices/quang_huy.wav"></audio> |
-| `thanh_phong` | Thanh Phong | male | <audio controls preload="none" src="https://huggingface.co/dogenthq/KorvaTTS/resolve/main/raw_voices/thanh_phong.wav"></audio> |
+| Voice | Name | Gender | Sample (synthesized) | Reference recording |
+|-------|------|--------|----------------------|---------------------|
+| `bao_kim` | Bảo Kim | female | <audio controls preload="none" src="https://huggingface.co/dogenthq/KorvaTTS/resolve/main/samples/bao_kim.wav"></audio> | <audio controls preload="none" src="https://huggingface.co/dogenthq/KorvaTTS/resolve/main/raw_voices/bao_kim.wav"></audio> |
+| `khanh_vy` | Khánh Vy | female | <audio controls preload="none" src="https://huggingface.co/dogenthq/KorvaTTS/resolve/main/samples/khanh_vy.wav"></audio> | <audio controls preload="none" src="https://huggingface.co/dogenthq/KorvaTTS/resolve/main/raw_voices/khanh_vy.wav"></audio> |
+| `ngoc_huyen` | Ngọc Huyền | female | <audio controls preload="none" src="https://huggingface.co/dogenthq/KorvaTTS/resolve/main/samples/ngoc_huyen.wav"></audio> | <audio controls preload="none" src="https://huggingface.co/dogenthq/KorvaTTS/resolve/main/raw_voices/ngoc_huyen.wav"></audio> |
+| `phuong_linh` | Phương Linh | female | <audio controls preload="none" src="https://huggingface.co/dogenthq/KorvaTTS/resolve/main/samples/phuong_linh.wav"></audio> | <audio controls preload="none" src="https://huggingface.co/dogenthq/KorvaTTS/resolve/main/raw_voices/phuong_linh.wav"></audio> |
+| `quynh_nhu` | Quỳnh Như | female | <audio controls preload="none" src="https://huggingface.co/dogenthq/KorvaTTS/resolve/main/samples/quynh_nhu.wav"></audio> | <audio controls preload="none" src="https://huggingface.co/dogenthq/KorvaTTS/resolve/main/raw_voices/quynh_nhu.wav"></audio> |
+| `gia_bao` | Gia Bảo | male | <audio controls preload="none" src="https://huggingface.co/dogenthq/KorvaTTS/resolve/main/samples/gia_bao.wav"></audio> | <audio controls preload="none" src="https://huggingface.co/dogenthq/KorvaTTS/resolve/main/raw_voices/gia_bao.wav"></audio> |
+| `hoang_nam` | Hoàng Nam | male | <audio controls preload="none" src="https://huggingface.co/dogenthq/KorvaTTS/resolve/main/samples/hoang_nam.wav"></audio> | <audio controls preload="none" src="https://huggingface.co/dogenthq/KorvaTTS/resolve/main/raw_voices/hoang_nam.wav"></audio> |
+| `huu_dat` | Hữu Đạt | male | <audio controls preload="none" src="https://huggingface.co/dogenthq/KorvaTTS/resolve/main/samples/huu_dat.wav"></audio> | <audio controls preload="none" src="https://huggingface.co/dogenthq/KorvaTTS/resolve/main/raw_voices/huu_dat.wav"></audio> |
+| `quang_huy` | Quang Huy | male | <audio controls preload="none" src="https://huggingface.co/dogenthq/KorvaTTS/resolve/main/samples/quang_huy.wav"></audio> | <audio controls preload="none" src="https://huggingface.co/dogenthq/KorvaTTS/resolve/main/raw_voices/quang_huy.wav"></audio> |
+| `thanh_phong` | Thanh Phong | male | <audio controls preload="none" src="https://huggingface.co/dogenthq/KorvaTTS/resolve/main/samples/thanh_phong.wav"></audio> | <audio controls preload="none" src="https://huggingface.co/dogenthq/KorvaTTS/resolve/main/raw_voices/thanh_phong.wav"></audio> |
+
+<details>
+<summary>Sample sentences</summary>
+
+- **Bảo Kim** (`bao_kim`): "Chào mừng bạn đến với podcast Công nghệ mỗi ngày. Hôm nay chúng ta sẽ nói về cách AI đang thay đổi ngành marketing và những skill mà người làm content cần có."
+- **Khánh Vy** (`khanh_vy`): "Dạ, đơn hàng của anh đã được xác nhận và sẽ ship trong vòng hai ngày. Anh có thể track đơn hàng qua app hoặc website của bên em bất cứ lúc nào ạ."
+- **Ngọc Huyền** (`ngoc_huyen`): "Trong bài học hôm nay, các em sẽ học cách dùng hàm filter và map trong JavaScript để xử lý dữ liệu. Mở file bài tập lên và chúng ta bắt đầu nhé."
+- **Phương Linh** (`phuong_linh`): "Tin nhanh buổi sáng: chỉ số VN-Index tăng nhẹ, trong khi nhóm cổ phiếu công nghệ tiếp tục thu hút dòng tiền từ các quỹ đầu tư nước ngoài."
+- **Quỳnh Như** (`quynh_nhu`): "Bạn có mười phút không? Mình muốn demo tính năng voice cloning mới, feedback của bạn rất quan trọng với team trước khi release."
+- **Gia Bảo** (`gia_bao`): "Chào cả nhà, hôm nay mình review chiếc laptop mới: màn hình OLED, pin trâu, và hiệu năng thì khỏi bàn. Bấm subscribe để không bỏ lỡ video tiếp theo nhé."
+- **Hoàng Nam** (`hoang_nam`): "Thưa quý khách, chuyến bay VN một hai ba đi Đà Nẵng sẽ bắt đầu boarding tại cửa số bảy trong vài phút nữa. Xin vui lòng chuẩn bị sẵn thẻ lên máy bay."
+- **Hữu Đạt** (`huu_dat`): "Sprint này team cần hoàn thành phần login bằng OAuth, còn phần dashboard sẽ dời sang sprint sau. Ai có blocker thì báo trong daily standup nhé."
+- **Quang Huy** (`quang_huy`): "Nhớ backup dữ liệu trước khi update hệ điều hành, nếu không lỡ mất file thì khó khôi phục lắm đấy. Tốt nhất là sync lên cloud rồi hãy bấm cài đặt."
+- **Thanh Phong** (`thanh_phong`): "Trận đấu tối nay giữa Việt Nam và Thái Lan sẽ được livestream lúc bảy giờ rưỡi trên kênh chính thức. Anh em nhớ đặt lịch để không bỏ lỡ highlight nhé."
+
+</details>
 
 ## Community
 
@@ -85,7 +101,8 @@ Full documentation, CLI reference and roadmap: [github.com/dogenthq/KorvaTTS](ht
 | `onnx/vocoder.onnx` | BlueCodec-based latent → 44.1 kHz waveform decoder |
 | `onnx/tts.json`, `onnx/unicode_indexer.json` | Architecture hyper-parameters and character table |
 | `voice_styles/<voice>.json` | Precomputed style tokens (`style_ttl` 1×50×256, `style_dp` 1×8×16) |
-| `raw_voices/<voice>.wav` | Reference recordings (44.1 kHz mono, 8–12 s) the styles were built from (table above) |
+| `samples/<voice>.wav` | Synthesized demo clips, one distinct sentence per voice (table above) |
+| `raw_voices/<voice>.wav` | Reference recordings (44.1 kHz mono, 8–12 s) the styles were built from |
 
 ## Compatibility with Supertonic runtimes
 
