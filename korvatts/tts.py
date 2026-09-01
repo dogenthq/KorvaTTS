@@ -22,6 +22,7 @@ from korvatts.text_processor import TextProcessor, chunk_text, length_to_mask
 from korvatts.voice_style import VoiceStyle
 
 DEFAULT_TOTAL_STEPS = 32  # maximum supported; best quality
+DEFAULT_SPEED = 1.05  # slightly faster than the raw duration predictor; sounds more natural
 MAX_TOTAL_STEPS = 32
 SPEED_RANGE = (0.5, 2.0)
 
@@ -69,7 +70,7 @@ class TTS:
         voice: VoiceStyle | str,
         lang: str = "vi",
         total_steps: int = DEFAULT_TOTAL_STEPS,
-        speed: float = 1.0,
+        speed: float = DEFAULT_SPEED,
         silence_between_chunks: float = 0.3,
         seed: int | None = None,
     ) -> tuple[np.ndarray, float]:

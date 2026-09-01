@@ -53,7 +53,7 @@ wav, duration = tts.synthesize(
     voice="khanh_vy",
     lang="vi",
     total_steps=32,  # mặc định; chất lượng tốt nhất. Giảm (8-16) nếu cần nhanh hơn
-    speed=1.0,       # 0.5 .. 2.0
+    speed=1.05,      # mặc định; 0.5 (chậm) .. 2.0 (nhanh)
 )
 tts.save_audio(wav, "output.wav")
 ```

@@ -9,7 +9,7 @@ import time
 from korvatts import __version__
 from korvatts.session import DEVICES
 from korvatts.text_processor import AVAILABLE_LANGS
-from korvatts.tts import DEFAULT_TOTAL_STEPS, MAX_TOTAL_STEPS, TTS
+from korvatts.tts import DEFAULT_SPEED, DEFAULT_TOTAL_STEPS, MAX_TOTAL_STEPS, TTS
 
 
 def _build_parser() -> argparse.ArgumentParser:
@@ -33,7 +33,7 @@ def _build_parser() -> argparse.ArgumentParser:
         "--steps", type=int, default=DEFAULT_TOTAL_STEPS,
         help=f"Denoising steps, 1..{MAX_TOTAL_STEPS}; fewer = faster, {MAX_TOTAL_STEPS} = best",
     )
-    synth.add_argument("--speed", type=float, default=1.0, help="0.5 (slow) .. 2.0 (fast)")
+    synth.add_argument("--speed", type=float, default=DEFAULT_SPEED, help="0.5 (slow) .. 2.0 (fast)")
     synth.add_argument("--seed", type=int, default=None, help="Fix random seed for reproducibility")
 
     sub.add_parser("voices", parents=[common], help="List available voice styles")

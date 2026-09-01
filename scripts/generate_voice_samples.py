@@ -2,7 +2,7 @@
 
 Usage:
     python scripts/generate_voice_samples.py [--assets-dir assets] [--out assets/samples]
-                                             [--steps 32] [--seed 0] [--only stem ...]
+                                             [--steps 32] [--seed 0] [--speed 1.05] [--only stem ...]
 
 Output: ``<out>/<voice>.wav`` (44.1 kHz mono), one distinct sentence per voice
 (see scripts/voice_catalog.py).
@@ -27,6 +27,7 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--out", default="assets/samples")
     parser.add_argument("--steps", type=int, default=32)
     parser.add_argument("--seed", type=int, default=0)
+    parser.add_argument("--speed", type=float, default=1.05, help="Speech speed, 0.5 .. 2.0")
     parser.add_argument("--only", nargs="*", default=None, help="Voice stems to (re)generate")
     args = parser.parse_args(argv)
 
@@ -43,7 +44,8 @@ def main(argv: list[str] | None = None) -> int:
     for v in selected:
         start = time.perf_counter()
         wav, duration = tts.synthesize(
-            v.sample_text, voice=v.stem, lang="vi", total_steps=args.steps, seed=args.seed
+            v.sample_text, voice=v.stem, lang="vi", total_steps=args.steps, seed=args.seed,
+            speed=args.speed,
         )
         tts.save_audio(wav, out_dir / f"{v.stem}.wav")
         print(f"{v.stem:12s} {duration:5.2f}s audio  {time.perf_counter() - start:5.2f}s wall")
