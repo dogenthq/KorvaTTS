@@ -62,10 +62,6 @@ The model is a from-scratch re-implementation of the 99M-parameter [Supertonic 3
 
 </details>
 
-## Community
-
-Questions, voice requests, show-and-tell: **[Discord](https://discord.gg/cX5rmsRcsg)** · bugs: [GitHub Issues](https://github.com/dogenthq/KorvaTTS/issues).
-
 ## Usage
 
 ```bash
@@ -91,6 +87,16 @@ korvatts synth "Xin chào, đây là KorvaTTS." -v khanh_vy -o hello.wav
 
 Full documentation, CLI reference and roadmap: [github.com/dogenthq/KorvaTTS](https://github.com/dogenthq/KorvaTTS).
 
+## Language support
+
+- **Vietnamese** (`vi`) — primary target, including embedded English words.
+- **English** (`en`) — part of the training data; works, but English quality is not guaranteed to match the original Supertonic 3 English voices.
+- Other Supertonic 3 language tags are accepted by the encoder but were not trained on.
+
+## Compatibility with Supertonic runtimes
+
+The ONNX graph signatures and the voice-style JSON format are identical to Supertonic 3, so `onnx/` and `voice_styles/` can be dropped into any Supertonic 3 runtime (Python, Node.js, WebGPU, Rust, C++, Swift, Flutter, …). This holds for roadmap phases 1–2; phase 3 will change the architecture and break compatibility. Compatible checkpoints are tagged as such.
+
 ## Files
 
 | Path | Description |
@@ -104,20 +110,14 @@ Full documentation, CLI reference and roadmap: [github.com/dogenthq/KorvaTTS](ht
 | `samples/<voice>.wav` | Synthesized demo clips, one distinct sentence per voice (table above) |
 | `raw_voices/<voice>.wav` | Reference recordings (44.1 kHz mono, 8–12 s) the styles were built from |
 
-## Compatibility with Supertonic runtimes
-
-The ONNX graph signatures and the voice-style JSON format are identical to Supertonic 3, so `onnx/` and `voice_styles/` can be dropped into any Supertonic 3 runtime (Python, Node.js, WebGPU, Rust, C++, Swift, Flutter, …). This holds for roadmap phases 1–2; phase 3 will change the architecture and break compatibility. Compatible checkpoints are tagged as such.
-
-## Language support
-
-- **Vietnamese** (`vi`) — primary target, including embedded English words.
-- **English** (`en`) — part of the training data; works, but English quality is not guaranteed to match the original Supertonic 3 English voices.
-- Other Supertonic 3 language tags are accepted by the encoder but were not trained on.
-
 ## Training data
 
 - [PhoAudiobook](https://huggingface.co/datasets/thivux/phoaudiobook) — 941 h of curated Vietnamese audiobook speech ([ACL 2025](https://aclanthology.org/2025.acl-short.81.pdf)).
 - A private Vietnamese/English code-switching corpus collected by the authors (not released).
+
+## Community
+
+Questions, voice requests, show-and-tell: **[Discord](https://discord.gg/cX5rmsRcsg)** · bugs: [GitHub Issues](https://github.com/dogenthq/KorvaTTS/issues).
 
 ## License
 
