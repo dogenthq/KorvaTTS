@@ -31,20 +31,20 @@ The model is a from-scratch re-implementation of the 99M-parameter [Supertonic 3
 
 ## Voices
 
-10 bundled voices (5 female, 5 male). **Sample** = synthesized by KorvaTTS from a different Vietnamese sentence per voice, each with natural English code-switching. **Reference** = the original recording the voice style was built from (`raw_voices/`).
+10 bundled voices (5 female, 5 male). **Ref** = original recording the voice style was built from. **Sample** = synthesized by KorvaTTS, a different Vietnamese sentence per voice with natural English code-switching.
 
-| Voice | Name | Gender | Sample (synthesized) | Reference recording |
-|-------|------|--------|----------------------|---------------------|
-| `bao_kim` | Bảo Kim | female | <audio controls preload="none" src="https://huggingface.co/dogenthq/KorvaTTS/resolve/main/samples/bao_kim.wav"></audio> | <audio controls preload="none" src="https://huggingface.co/dogenthq/KorvaTTS/resolve/main/raw_voices/bao_kim.wav"></audio> |
-| `khanh_vy` | Khánh Vy | female | <audio controls preload="none" src="https://huggingface.co/dogenthq/KorvaTTS/resolve/main/samples/khanh_vy.wav"></audio> | <audio controls preload="none" src="https://huggingface.co/dogenthq/KorvaTTS/resolve/main/raw_voices/khanh_vy.wav"></audio> |
-| `ngoc_huyen` | Ngọc Huyền | female | <audio controls preload="none" src="https://huggingface.co/dogenthq/KorvaTTS/resolve/main/samples/ngoc_huyen.wav"></audio> | <audio controls preload="none" src="https://huggingface.co/dogenthq/KorvaTTS/resolve/main/raw_voices/ngoc_huyen.wav"></audio> |
-| `phuong_linh` | Phương Linh | female | <audio controls preload="none" src="https://huggingface.co/dogenthq/KorvaTTS/resolve/main/samples/phuong_linh.wav"></audio> | <audio controls preload="none" src="https://huggingface.co/dogenthq/KorvaTTS/resolve/main/raw_voices/phuong_linh.wav"></audio> |
-| `quynh_nhu` | Quỳnh Như | female | <audio controls preload="none" src="https://huggingface.co/dogenthq/KorvaTTS/resolve/main/samples/quynh_nhu.wav"></audio> | <audio controls preload="none" src="https://huggingface.co/dogenthq/KorvaTTS/resolve/main/raw_voices/quynh_nhu.wav"></audio> |
-| `gia_bao` | Gia Bảo | male | <audio controls preload="none" src="https://huggingface.co/dogenthq/KorvaTTS/resolve/main/samples/gia_bao.wav"></audio> | <audio controls preload="none" src="https://huggingface.co/dogenthq/KorvaTTS/resolve/main/raw_voices/gia_bao.wav"></audio> |
-| `hoang_nam` | Hoàng Nam | male | <audio controls preload="none" src="https://huggingface.co/dogenthq/KorvaTTS/resolve/main/samples/hoang_nam.wav"></audio> | <audio controls preload="none" src="https://huggingface.co/dogenthq/KorvaTTS/resolve/main/raw_voices/hoang_nam.wav"></audio> |
-| `huu_dat` | Hữu Đạt | male | <audio controls preload="none" src="https://huggingface.co/dogenthq/KorvaTTS/resolve/main/samples/huu_dat.wav"></audio> | <audio controls preload="none" src="https://huggingface.co/dogenthq/KorvaTTS/resolve/main/raw_voices/huu_dat.wav"></audio> |
-| `quang_huy` | Quang Huy | male | <audio controls preload="none" src="https://huggingface.co/dogenthq/KorvaTTS/resolve/main/samples/quang_huy.wav"></audio> | <audio controls preload="none" src="https://huggingface.co/dogenthq/KorvaTTS/resolve/main/raw_voices/quang_huy.wav"></audio> |
-| `thanh_phong` | Thanh Phong | male | <audio controls preload="none" src="https://huggingface.co/dogenthq/KorvaTTS/resolve/main/samples/thanh_phong.wav"></audio> | <audio controls preload="none" src="https://huggingface.co/dogenthq/KorvaTTS/resolve/main/raw_voices/thanh_phong.wav"></audio> |
+| Voice | Name | Gender | Ref | Sample |
+|-------|------|--------|-----|--------|
+| `bao_kim` | Bảo Kim | female | <audio controls preload="none" src="https://huggingface.co/dogenthq/KorvaTTS/resolve/main/raw_voices/bao_kim.wav"></audio> | <audio controls preload="none" src="https://huggingface.co/dogenthq/KorvaTTS/resolve/main/samples/bao_kim.wav"></audio> |
+| `khanh_vy` | Khánh Vy | female | <audio controls preload="none" src="https://huggingface.co/dogenthq/KorvaTTS/resolve/main/raw_voices/khanh_vy.wav"></audio> | <audio controls preload="none" src="https://huggingface.co/dogenthq/KorvaTTS/resolve/main/samples/khanh_vy.wav"></audio> |
+| `ngoc_huyen` | Ngọc Huyền | female | <audio controls preload="none" src="https://huggingface.co/dogenthq/KorvaTTS/resolve/main/raw_voices/ngoc_huyen.wav"></audio> | <audio controls preload="none" src="https://huggingface.co/dogenthq/KorvaTTS/resolve/main/samples/ngoc_huyen.wav"></audio> |
+| `phuong_linh` | Phương Linh | female | <audio controls preload="none" src="https://huggingface.co/dogenthq/KorvaTTS/resolve/main/raw_voices/phuong_linh.wav"></audio> | <audio controls preload="none" src="https://huggingface.co/dogenthq/KorvaTTS/resolve/main/samples/phuong_linh.wav"></audio> |
+| `quynh_nhu` | Quỳnh Như | female | <audio controls preload="none" src="https://huggingface.co/dogenthq/KorvaTTS/resolve/main/raw_voices/quynh_nhu.wav"></audio> | <audio controls preload="none" src="https://huggingface.co/dogenthq/KorvaTTS/resolve/main/samples/quynh_nhu.wav"></audio> |
+| `gia_bao` | Gia Bảo | male | <audio controls preload="none" src="https://huggingface.co/dogenthq/KorvaTTS/resolve/main/raw_voices/gia_bao.wav"></audio> | <audio controls preload="none" src="https://huggingface.co/dogenthq/KorvaTTS/resolve/main/samples/gia_bao.wav"></audio> |
+| `hoang_nam` | Hoàng Nam | male | <audio controls preload="none" src="https://huggingface.co/dogenthq/KorvaTTS/resolve/main/raw_voices/hoang_nam.wav"></audio> | <audio controls preload="none" src="https://huggingface.co/dogenthq/KorvaTTS/resolve/main/samples/hoang_nam.wav"></audio> |
+| `huu_dat` | Hữu Đạt | male | <audio controls preload="none" src="https://huggingface.co/dogenthq/KorvaTTS/resolve/main/raw_voices/huu_dat.wav"></audio> | <audio controls preload="none" src="https://huggingface.co/dogenthq/KorvaTTS/resolve/main/samples/huu_dat.wav"></audio> |
+| `quang_huy` | Quang Huy | male | <audio controls preload="none" src="https://huggingface.co/dogenthq/KorvaTTS/resolve/main/raw_voices/quang_huy.wav"></audio> | <audio controls preload="none" src="https://huggingface.co/dogenthq/KorvaTTS/resolve/main/samples/quang_huy.wav"></audio> |
+| `thanh_phong` | Thanh Phong | male | <audio controls preload="none" src="https://huggingface.co/dogenthq/KorvaTTS/resolve/main/raw_voices/thanh_phong.wav"></audio> | <audio controls preload="none" src="https://huggingface.co/dogenthq/KorvaTTS/resolve/main/samples/thanh_phong.wav"></audio> |
 
 <details>
 <summary>Sample sentences</summary>
