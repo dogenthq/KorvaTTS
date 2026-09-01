@@ -1,6 +1,6 @@
 [project]
 name = "korvatts"
-version = "0.1.2"
+version = "0.1.3"
 description = "Vietnamese-first, on-device text-to-speech (ONNX) with code-switching support"
 readme = "README.md"
 license = { text = "Apache-2.0" }

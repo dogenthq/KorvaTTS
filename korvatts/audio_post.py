@@ -13,8 +13,9 @@ import numpy as np
 _FRAME_S = 0.02  # RMS analysis frame
 _SEARCH_S = 0.6  # how far from the end to look for a trailing pause
 _GAP_RMS = 0.01  # below this RMS a frame counts as silence
-_MIN_GAP_S = 0.12  # a pause must be at least this long to separate speech from a burst
+_MIN_GAP_S = 0.05  # a pause must be at least this long to separate speech from a burst
 _MAX_BURST_S = 0.35  # audio after the pause longer than this is treated as real speech
+_BURST_PEAK = 0.4  # bursts run near clipping; trailing real speech stays below this after a pause
 _KEEP_PAUSE_S = 0.05  # how much of the pause to keep after cutting
 _FADE_S = 0.03
 
@@ -49,11 +50,14 @@ def _detached_burst_start(wav: np.ndarray, sample_rate: int) -> int | None:
         best = gap_start
     if best is None:
         return None
-    # Substantial audio continuing after the pause means it is real speech, not a burst.
     after = wav[best + int(_MIN_GAP_S * sample_rate) :]
-    if len(after) > int(_MAX_BURST_S * sample_rate) and float(np.abs(after).max()) > 0.05:
-        return None
-    return best
+    peak = float(np.abs(after).max()) if len(after) else 0.0
+    if peak < 0.05:
+        return best  # only silence remains: trim it
+    # A burst is short AND abnormally loud; anything long or moderate is real speech.
+    if len(after) <= int(_MAX_BURST_S * sample_rate) and peak >= _BURST_PEAK:
+        return best
+    return None
 
 
 def _fade_out(wav: np.ndarray, sample_rate: int, duration: float = _FADE_S) -> None:
