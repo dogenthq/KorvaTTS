@@ -5,11 +5,14 @@
 [![Models](https://img.shields.io/badge/🤗%20Hugging%20Face-dogenthq%2FKorvaTTS-blue)](https://huggingface.co/dogenthq/KorvaTTS)
 [![License: Apache-2.0](https://img.shields.io/badge/license-Apache--2.0-green)](LICENSE)
 [![GitHub stars](https://img.shields.io/github/stars/dogenthq/KorvaTTS?style=social)](https://github.com/dogenthq/KorvaTTS/stargazers)
+[![Try it online](https://img.shields.io/badge/🌐%20Try%20it%20online-heykorva.com-2ea44f)](https://heykorva.com/)
 [![Discord](https://img.shields.io/badge/Discord-tham%20gia%20cộng%20đồng-5865F2?logo=discord&logoColor=white)](https://discord.gg/cX5rmsRcsg)
 
 KorvaTTS là hệ thống text-to-speech mã nguồn mở tập trung vào **tiếng Việt có code-switching** (câu tiếng Việt chứa từ tiếng Anh, tên thương hiệu, thuật ngữ kỹ thuật). Toàn bộ chạy on-device qua ONNX Runtime: không cần GPU, không gọi API, âm thanh 44.1 kHz.
 
 Model là bản re-implement của chúng tôi theo kiến trúc [Supertonic 3](https://github.com/supertone-inc/supertonic) (99M tham số, flow-matching TTS), **train từ đầu** trên dữ liệu tiếng Việt, với vocoder dựa trên [BlueCodec](https://github.com/maxmelichov/BlueTTS). Nhóm tác giả Supertonic đang archive repo gốc; KorvaTTS tiếp nối hướng đi này với trọng tâm tiếng Việt và lộ trình mở hướng tới voice cloning và training.
+
+**🌐 Dùng thử ngay trên trình duyệt — không cần cài đặt:** [heykorva.com](https://heykorva.com/)
 
 ## Điểm nổi bật
 

@@ -22,12 +22,15 @@ datasets:
 # KorvaTTS — Vietnamese-first, on-device text-to-speech
 
 [![GitHub](https://img.shields.io/badge/GitHub-dogenthq%2FKorvaTTS-black?logo=github)](https://github.com/dogenthq/KorvaTTS)
+[![Try it online](https://img.shields.io/badge/🌐%20Try%20it%20online-heykorva.com-2ea44f)](https://heykorva.com/)
 [![Discord](https://img.shields.io/badge/Discord-join%20the%20community-5865F2?logo=discord&logoColor=white)](https://discord.gg/cX5rmsRcsg)
 [![License: Apache-2.0](https://img.shields.io/badge/license-Apache--2.0-green)](https://github.com/dogenthq/KorvaTTS/blob/main/MODEL_LICENSE.md)
 
 KorvaTTS is an open-source text-to-speech model focused on **Vietnamese with natural code-switching** (Vietnamese sentences containing English words, brand names and tech terms). It runs entirely on-device through ONNX Runtime — no GPU, no API calls — and outputs 44.1 kHz audio.
 
 The model is a from-scratch re-implementation of the 99M-parameter [Supertonic 3](https://github.com/supertone-inc/supertonic) architecture (flow-matching TTS) with a vocoder based on [BlueCodec](https://github.com/maxmelichov/BlueTTS), trained on Vietnamese speech. **No Supertonic checkpoint was used.**
+
+**🌐 Try it in your browser:** [heykorva.com](https://heykorva.com/)
 
 ## Voices
 
