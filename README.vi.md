@@ -90,7 +90,7 @@ Tương thích này là chủ đích cho giai đoạn 1–2. **Giai đoạn 3 s�
 | **2. Voice cloning + training** | Encoder từ audio tham chiếu → voice style, script train / fine-tune bằng PyTorch, công cụ chuẩn bị dữ liệu | 🔜 dự kiến |
 | **3. Cải tiến kiến trúc** | Thay đổi kiến trúc TTS + cloning để prosody tiếng Việt và độ giống giọng tốt hơn. **Sẽ không còn tương thích với Supertonic.** | 🧭 sau này |
 
-Giai đoạn 2 bắt đầu khi bản giai đoạn 1 đã có cộng đồng đủ mạnh — **mục tiêu là 1.000 sao GitHub** ⭐ [![GitHub stars](https://img.shields.io/github/stars/dogenthq/KorvaTTS?label=hiện%20tại&color=yellow)](https://github.com/dogenthq/KorvaTTS/stargazers). Hãy star repo để đẩy lộ trình đi nhanh hơn, và tham gia [Discord](https://discord.gg/cX5rmsRcsg) hoặc theo dõi tab Issues để cập nhật tiến độ.
+Giai đoạn 2 được ưu tiên dựa trên mức độ quan tâm của cộng đồng và nguồn lực hiện có. Theo dõi tiến độ trên [Discord](https://discord.gg/cX5rmsRcsg) và tab Issues — mọi phản hồi, báo lỗi hay đề xuất giọng mới đều góp phần định hình những gì được xây tiếp theo.
 
 <a href="https://star-history.com/#dogenthq/KorvaTTS&Date"><img src="https://api.star-history.com/svg?repos=dogenthq/KorvaTTS&type=Date" alt="Biểu đồ số sao theo thời gian" width="600"></a>
 

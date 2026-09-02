@@ -90,7 +90,7 @@ This compatibility is intentional for phases 1–2. **Phase 3 will change the ar
 | **2. Voice cloning + training** | Reference-audio → voice style encoder, PyTorch training / fine-tuning recipes, dataset tooling | 🔜 planned |
 | **3. Architecture improvements** | Original changes to the TTS + cloning architecture for better Vietnamese prosody and cloning fidelity. **Breaks Supertonic compatibility.** | 🧭 later |
 
-Phase 2 starts once the phase-1 release has a healthy community around it — **our goal is 1,000 GitHub stars** ⭐ [![GitHub stars](https://img.shields.io/github/stars/dogenthq/KorvaTTS?label=current&color=yellow)](https://github.com/dogenthq/KorvaTTS/stargazers). Star the repo to move the roadmap forward, and join our [Discord](https://discord.gg/cX5rmsRcsg) or watch the issues tab for progress.
+Phase 2 is prioritized based on community interest and available resources. Follow progress on [Discord](https://discord.gg/cX5rmsRcsg) and the issues tab — feedback, bug reports, and voice requests all help shape what gets built next.
 
 <a href="https://star-history.com/#dogenthq/KorvaTTS&Date"><img src="https://api.star-history.com/svg?repos=dogenthq/KorvaTTS&type=Date" alt="Star History Chart" width="600"></a>
 
