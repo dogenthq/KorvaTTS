@@ -96,7 +96,7 @@ Giai đoạn 2 được ưu tiên dựa trên mức độ quan tâm của cộng
 
 ## Dữ liệu huấn luyện
 
-- [PhoAudiobook](https://huggingface.co/datasets/thivux/phoaudiobook) — 941 giờ audiobook tiếng Việt đã được lọc, giới thiệu trong bài [Zero-Shot Text-to-Speech for Vietnamese (ACL 2025)](https://aclanthology.org/2025.acl-short.81.pdf).
+- Một phần đã lọc lại của [PhoAudiobook](https://huggingface.co/datasets/thivux/phoaudiobook) — kho ngữ liệu audiobook tiếng Việt quy mô lớn, giới thiệu trong bài [Zero-Shot Text-to-Speech for Vietnamese (ACL 2025)](https://aclanthology.org/2025.acl-short.81.pdf).
 - Bộ dữ liệu code-switching Việt/Anh do tác giả tự thu thập để cải thiện khả năng đọc văn bản pha trộn ngôn ngữ. Bộ này không được công bố.
 
 ## Cộng đồng

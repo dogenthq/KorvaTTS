@@ -96,7 +96,7 @@ Phase 2 is prioritized based on community interest and available resources. Foll
 
 ## Training data
 
-- [PhoAudiobook](https://huggingface.co/datasets/thivux/phoaudiobook) — 941 hours of curated Vietnamese audiobook speech, introduced in [Zero-Shot Text-to-Speech for Vietnamese (ACL 2025)](https://aclanthology.org/2025.acl-short.81.pdf).
+- A filtered subset of [PhoAudiobook](https://huggingface.co/datasets/thivux/phoaudiobook), a large-scale Vietnamese audiobook corpus introduced in [Zero-Shot Text-to-Speech for Vietnamese (ACL 2025)](https://aclanthology.org/2025.acl-short.81.pdf).
 - A private, author-collected Vietnamese/English code-switching set used to improve mixed-language reading. This set is not released.
 
 ## Community

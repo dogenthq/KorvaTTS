@@ -115,7 +115,7 @@ The ONNX graph signatures and the voice-style JSON format are identical to Super
 
 ## Training data
 
-- [PhoAudiobook](https://huggingface.co/datasets/thivux/phoaudiobook) — 941 h of curated Vietnamese audiobook speech ([ACL 2025](https://aclanthology.org/2025.acl-short.81.pdf)).
+- A filtered subset of [PhoAudiobook](https://huggingface.co/datasets/thivux/phoaudiobook), a large-scale Vietnamese audiobook corpus ([ACL 2025](https://aclanthology.org/2025.acl-short.81.pdf)).
 - A private Vietnamese/English code-switching corpus collected by the authors (not released).
 
 ## Community
